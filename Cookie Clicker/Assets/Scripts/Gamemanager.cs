@@ -1,6 +1,8 @@
 using System.Threading;
 using TMPro;
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class Gamemanager : MonoBehaviour
@@ -99,6 +101,10 @@ public class Gamemanager : MonoBehaviour
                 timer = 0;
                 Addcookie(factories * 100 * buildingmult);
             }
+        }
+        if (cookies >= 50000)
+        {
+            SceneManager.LoadScene("EndScene");
         }
     }
 
